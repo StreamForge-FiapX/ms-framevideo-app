@@ -1,0 +1,402 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\kubernetes\\hpa.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:kubernetes\\hpa.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\kubernetes\\service.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:kubernetes\\service.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\kubernetes\\deployment.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:kubernetes\\deployment.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\framework\\kubernetesworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\infrastructure\\framework\\kubernetesworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\api\\frameprocessingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\api\\frameprocessingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\configuration\\dependencyinjectionconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\infrastructure\\configuration\\dependencyinjectionconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\s3storageadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\infrastructure\\adapters\\s3storageadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\rediscacheadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\infrastructure\\adapters\\rediscacheadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\rabbitmqpublisheradapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\infrastructure\\adapters\\rabbitmqpublisheradapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\frameprocessingadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\infrastructure\\adapters\\frameprocessingadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\usecases\\updateframemetadatausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\application\\usecases\\updateframemetadatausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\usecases\\processchunkusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\application\\usecases\\processchunkusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\icacheport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\application\\ports\\icacheport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\istorageport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\application\\ports\\istorageport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\imessagepublisherport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\application\\ports\\imessagepublisherport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\iframeprocessorport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\application\\ports\\iframeprocessorport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\exceptions\\framegenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\domain\\exceptions\\framegenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\exceptions\\frameprocessingexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\domain\\exceptions\\frameprocessingexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\entities\\frame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\domain\\entities\\frame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|c:\\users\\raul\\documents\\desenv\\fiap\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\entities\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C228CD-25BA-4E15-8E11-30BFAD0244CA}|ms-framevideo-app.csproj|solutionrelative:src\\domain\\entities\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "hpa.yaml",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\kubernetes\\hpa.yaml",
+              "RelativeDocumentMoniker": "kubernetes\\hpa.yaml",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\kubernetes\\hpa.yaml",
+              "RelativeToolTip": "kubernetes\\hpa.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-01-21T01:05:56.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "service.yaml",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\kubernetes\\service.yaml",
+              "RelativeDocumentMoniker": "kubernetes\\service.yaml",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\kubernetes\\service.yaml",
+              "RelativeToolTip": "kubernetes\\service.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-01-21T01:05:44.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "deployment.yaml",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\kubernetes\\deployment.yaml",
+              "RelativeDocumentMoniker": "kubernetes\\deployment.yaml",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\kubernetes\\deployment.yaml",
+              "RelativeToolTip": "kubernetes\\deployment.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-01-21T01:05:16.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T01:03:14.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrameProcessingController.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\api\\FrameProcessingController.cs",
+              "RelativeDocumentMoniker": "src\\api\\FrameProcessingController.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\api\\FrameProcessingController.cs",
+              "RelativeToolTip": "src\\api\\FrameProcessingController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T01:03:04.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KubernetesWorkerService.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\framework\\KubernetesWorkerService.cs",
+              "RelativeDocumentMoniker": "src\\infrastructure\\framework\\KubernetesWorkerService.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\framework\\KubernetesWorkerService.cs",
+              "RelativeToolTip": "src\\infrastructure\\framework\\KubernetesWorkerService.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAkwHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T01:02:37.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-21T01:01:44.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DependencyInjectionConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\configuration\\DependencyInjectionConfig.cs",
+              "RelativeDocumentMoniker": "src\\infrastructure\\configuration\\DependencyInjectionConfig.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\configuration\\DependencyInjectionConfig.cs",
+              "RelativeToolTip": "src\\infrastructure\\configuration\\DependencyInjectionConfig.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T01:01:24.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "S3StorageAdapter.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\S3StorageAdapter.cs",
+              "RelativeDocumentMoniker": "src\\infrastructure\\adapters\\S3StorageAdapter.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\S3StorageAdapter.cs",
+              "RelativeToolTip": "src\\infrastructure\\adapters\\S3StorageAdapter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T01:01:05.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RedisCacheAdapter.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\RedisCacheAdapter.cs",
+              "RelativeDocumentMoniker": "src\\infrastructure\\adapters\\RedisCacheAdapter.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\RedisCacheAdapter.cs",
+              "RelativeToolTip": "src\\infrastructure\\adapters\\RedisCacheAdapter.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAkwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T01:00:20.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RabbitMqPublisherAdapter.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\RabbitMqPublisherAdapter.cs",
+              "RelativeDocumentMoniker": "src\\infrastructure\\adapters\\RabbitMqPublisherAdapter.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\RabbitMqPublisherAdapter.cs",
+              "RelativeToolTip": "src\\infrastructure\\adapters\\RabbitMqPublisherAdapter.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwBwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:59:53.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FrameProcessingAdapter.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\FrameProcessingAdapter.cs",
+              "RelativeDocumentMoniker": "src\\infrastructure\\adapters\\FrameProcessingAdapter.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\infrastructure\\adapters\\FrameProcessingAdapter.cs",
+              "RelativeToolTip": "src\\infrastructure\\adapters\\FrameProcessingAdapter.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:59:39.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateFrameMetadataUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\usecases\\UpdateFrameMetadataUseCase.cs",
+              "RelativeDocumentMoniker": "src\\application\\usecases\\UpdateFrameMetadataUseCase.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\usecases\\UpdateFrameMetadataUseCase.cs",
+              "RelativeToolTip": "src\\application\\usecases\\UpdateFrameMetadataUseCase.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:59:18.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProcessChunkUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\usecases\\ProcessChunkUseCase.cs",
+              "RelativeDocumentMoniker": "src\\application\\usecases\\ProcessChunkUseCase.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\usecases\\ProcessChunkUseCase.cs",
+              "RelativeToolTip": "src\\application\\usecases\\ProcessChunkUseCase.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:55:09.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ICachePort.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\ICachePort.cs",
+              "RelativeDocumentMoniker": "src\\application\\ports\\ICachePort.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\ICachePort.cs",
+              "RelativeToolTip": "src\\application\\ports\\ICachePort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:54:47.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IStoragePort.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\IStoragePort.cs",
+              "RelativeDocumentMoniker": "src\\application\\ports\\IStoragePort.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\IStoragePort.cs",
+              "RelativeToolTip": "src\\application\\ports\\IStoragePort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:54:37.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IMessagePublisherPort.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\IMessagePublisherPort.cs",
+              "RelativeDocumentMoniker": "src\\application\\ports\\IMessagePublisherPort.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\IMessagePublisherPort.cs",
+              "RelativeToolTip": "src\\application\\ports\\IMessagePublisherPort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:54:05.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IFrameProcessorPort.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\IFrameProcessorPort.cs",
+              "RelativeDocumentMoniker": "src\\application\\ports\\IFrameProcessorPort.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\application\\ports\\IFrameProcessorPort.cs",
+              "RelativeToolTip": "src\\application\\ports\\IFrameProcessorPort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:53:51.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FrameGenerationService.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\exceptions\\FrameGenerationService.cs",
+              "RelativeDocumentMoniker": "src\\domain\\exceptions\\FrameGenerationService.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\exceptions\\FrameGenerationService.cs",
+              "RelativeToolTip": "src\\domain\\exceptions\\FrameGenerationService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAkwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:53:29.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FrameProcessingException.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\exceptions\\FrameProcessingException.cs",
+              "RelativeDocumentMoniker": "src\\domain\\exceptions\\FrameProcessingException.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\exceptions\\FrameProcessingException.cs",
+              "RelativeToolTip": "src\\domain\\exceptions\\FrameProcessingException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:53:16.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Frame.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\entities\\Frame.cs",
+              "RelativeDocumentMoniker": "src\\domain\\entities\\Frame.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\entities\\Frame.cs",
+              "RelativeToolTip": "src\\domain\\entities\\Frame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:52:49.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Chunk.cs",
+              "DocumentMoniker": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\entities\\Chunk.cs",
+              "RelativeDocumentMoniker": "src\\domain\\entities\\Chunk.cs",
+              "ToolTip": "C:\\Users\\Raul\\Documents\\desenv\\FIAP\\streamforge\\ms-framevideo-app\\ms-framevideo-app\\src\\domain\\entities\\Chunk.cs",
+              "RelativeToolTip": "src\\domain\\entities\\Chunk.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T00:52:21.271Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
