@@ -1,17 +1,10 @@
 ﻿// src/infrastructure/framework/KubernetesWorkerService.cs
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using ms_framevideo_app.src.application.usecases;
 using ms_framevideo_app.src.domain.entities;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using System;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 
 namespace ms_framevideo_app.src.infrastructure.framework
@@ -22,7 +15,7 @@ namespace ms_framevideo_app.src.infrastructure.framework
         private readonly ProcessChunkUseCase _processChunkUseCase;
         private readonly IConfiguration _configuration;
         private IConnection? _connection;
-        private IModel? _channel;
+        private IChannel? _channel;
 
         public KubernetesWorkerService(
             ILogger<KubernetesWorkerService> logger,
@@ -34,32 +27,39 @@ namespace ms_framevideo_app.src.infrastructure.framework
             _configuration = configuration;
         }
 
-        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            SetupRabbitMQ();
-            return Task.CompletedTask;
+            await SetupRabbitMQAsync();
         }
 
-        private void SetupRabbitMQ()
+        private async Task SetupRabbitMQAsync()
         {
             try
             {
+                // Configuração via appsettings.json
                 var rabbitHost = _configuration["RabbitMQ:Host"];
                 var queueIn = _configuration["RabbitMQ:QueueIn"];
 
-                var factory = new ConnectionFactory() { HostName = rabbitHost };
-                _connection = (IConnection?)factory.CreateConnectionAsync();
-                _channel = _connection.CreateModel();
+                if (string.IsNullOrWhiteSpace(rabbitHost)) throw new InvalidOperationException("RabbitMQ:Host não está configurado.");
+                if (string.IsNullOrWhiteSpace(queueIn)) throw new InvalidOperationException("RabbitMQ:QueueIn não está configurado.");
 
-                _channel.QueueDeclare(
+                var factory = new ConnectionFactory() { HostName = rabbitHost };
+                
+                // Criação assíncrona da conexão e do canal
+                _connection = await factory.CreateConnectionAsync();
+                _channel = await _connection.CreateChannelAsync();
+
+                // Declarar a fila de entrada
+                await _channel.QueueDeclareAsync(
                     queue: queueIn,
                     durable: true,
                     exclusive: false,
                     autoDelete: false,
-                    arguments: null);
+                    arguments: null
+                );
 
-                var consumer = new EventingBasicConsumer(_channel);
-                consumer.Received += (model, ea) =>
+                var consumer = new AsyncEventingBasicConsumer(_channel);
+                consumer.ReceivedAsync += async (model, ea) =>
                 {
                     var body = ea.Body.ToArray();
                     var message = Encoding.UTF8.GetString(body);
@@ -78,41 +78,62 @@ namespace ms_framevideo_app.src.infrastructure.framework
                         // Monta objeto Chunk
                         var chunk = new Chunk(chunkId, videoId, fileName, durationInSeconds);
 
-                        // Chama caso de uso
                         // Ajuste o nome dos buckets conforme seu AppSettings ou Config
                         string bucketInput = "uploaded-video-chunk";
                         string bucketOutput = "uploaded-chunk-frame-bucket";
 
+                        // Executar caso de uso
                         _processChunkUseCase.Execute(chunk, bucketInput, bucketOutput);
 
-                        _channel.BasicAck(ea.DeliveryTag, false);
+                        // Confirmação da mensagem processada com sucesso
+                        await _channel.BasicAckAsync(ea.DeliveryTag, false);
                     }
                     catch (Exception ex)
                     {
                         _logger.LogError(ex, "Erro ao processar mensagem RabbitMQ.");
-                        // Podemos fazer requeue ou descartar a mensagem
-                        _channel.BasicNack(ea.DeliveryTag, false, false);
+
+                        // Rejeitar a mensagem sem requeue
+                        await _channel.BasicNackAsync(ea.DeliveryTag, false, false);
                     }
                 };
 
-                _channel.BasicConsume(
+                // Consumir mensagens da fila
+                await _channel.BasicConsumeAsync(
                     queue: queueIn,
                     autoAck: false,
-                    consumer: consumer);
+                    consumer: consumer
+                );
 
-                _logger.LogInformation("KubernetesWorkerService iniciado e aguardando mensagens...");
+                _logger.LogInformation("RabbitMQ configurado e aguardando mensagens...");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Falha ao configurar conexão RabbitMQ");
+                _logger.LogError(ex, "Falha ao configurar conexão RabbitMQ.");
+                throw;
             }
         }
 
-        public override void Dispose()
+        public override async void Dispose()
         {
-            _channel?.Close();
-            _connection?.Close();
-            base.Dispose();
+            try
+            {
+                if (_channel != null)
+                {
+                    await _channel.CloseAsync();
+                    await _channel.DisposeAsync();
+                }
+
+                if (_connection != null)
+                {
+                    await _connection.CloseAsync();
+                    await _connection.DisposeAsync();
+                }
+            }
+            finally
+            {
+                GC.SuppressFinalize(this);
+                base.Dispose();
+            }
         }
     }
 }

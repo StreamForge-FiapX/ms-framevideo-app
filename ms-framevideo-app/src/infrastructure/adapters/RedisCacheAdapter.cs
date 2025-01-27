@@ -18,7 +18,8 @@ namespace ms_framevideo_app.src.infrastructure.adapters
             _configuration = configuration;
 
             // Exemplo: "Redis:ConnectionString": "my-redis-cluster.abc123.ng.0001.use1.cache.amazonaws.com:6379"
-            string redisConnectionString = _configuration["Redis:ConnectionString"];
+            string? redisConnectionString = _configuration["Redis:ConnectionString"];
+            if (string.IsNullOrWhiteSpace(redisConnectionString)) throw new InvalidOperationException("Redis:ConnectionString não está configurado.");
             _redisConnection = ConnectionMultiplexer.Connect(redisConnectionString);
         }
 

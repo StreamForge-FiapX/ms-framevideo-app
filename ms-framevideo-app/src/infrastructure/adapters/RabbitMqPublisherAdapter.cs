@@ -18,32 +18,62 @@ namespace ms_framevideo_app.src.infrastructure.adapters
             _configuration = configuration;
         }
 
-        public void PublishChunkProcessed(string chunkId, string s3Location, string videoId)
+        public async void PublishChunkProcessed(string chunkId, string s3Location, string videoId)
         {
+            if (string.IsNullOrWhiteSpace(chunkId)) throw new ArgumentException("chunkId não pode ser nulo ou vazio.", nameof(chunkId));
+            if (string.IsNullOrWhiteSpace(s3Location)) throw new ArgumentException("s3Location não pode ser nulo ou vazio.", nameof(s3Location));
+            if (string.IsNullOrWhiteSpace(videoId)) throw new ArgumentException("videoId não pode ser nulo ou vazio.", nameof(videoId));
+
             // Exemplo de configuração via appsettings.json
             var rabbitHost = _configuration["RabbitMQ:Host"];
             var queueName = _configuration["RabbitMQ:QueueOut"]; // ex.: frame-chunk-process
 
-            var factory = new ConnectionFactory() { HostName = rabbitHost };
+            if (string.IsNullOrWhiteSpace(rabbitHost)) throw new InvalidOperationException("O host do RabbitMQ não está configurado.");
+            if (string.IsNullOrWhiteSpace(queueName)) throw new InvalidOperationException("O nome da fila do RabbitMQ não está configurado.");
 
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
+
+            try
             {
-                channel.QueueDeclare(queue: queueName,
-                                     durable: true,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: null);
+                var factory = new ConnectionFactory() { HostName = rabbitHost };
+                using var connection = await factory.CreateConnectionAsync();
+                using var channel = await connection.CreateChannelAsync();
 
-                string message = $"{{ \"chunkId\": \"{chunkId}\", \"videoId\":\"{videoId}\", \"s3Location\":\"{s3Location}\" }}";
+                // Declarar a fila
+                await channel.QueueDeclareAsync(
+                    queue: queueName,
+                    durable: true,
+                    exclusive: false,
+                    autoDelete: false,
+                    arguments: null
+                );
+
+                // Preparar a mensagem
+                string message = $"{{ \"chunkId\": \"{chunkId}\", \"videoId\": \"{videoId}\", \"s3Location\": \"{s3Location}\" }}";
                 var body = Encoding.UTF8.GetBytes(message);
 
-                channel.BasicPublish(exchange: "",
-                                     routingKey: queueName,
-                                     basicProperties: null,
-                                     body: body);
+                var basicProperties = new BasicProperties
+                {
+                    Persistent = true,
+                    DeliveryMode = DeliveryModes.Persistent
+                };
 
-                _logger.LogInformation($"Mensagem publicada para fila {queueName}: {message}");
+                // Publicar a mensagem
+                await channel.BasicPublishAsync(
+                    exchange: "",
+                    routingKey: queueName,
+                    mandatory: true,
+                    basicProperties,
+                    body: body
+                );
+
+                // Logar sucesso
+                _logger.LogInformation($"Mensagem publicada na fila '{queueName}': {message}");
+            }
+            catch (Exception ex)
+            {
+                // Logar erros
+                _logger.LogError(ex, $"Ocorreu um erro ao publicar a mensagem na fila '{queueName}'.");
+                throw;
             }
         }
     }
