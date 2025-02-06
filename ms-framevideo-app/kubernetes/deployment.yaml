@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-framevideo-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ms-framevideo-app
+  template:
+    metadata:
+      labels:
+        app: ms-framevideo-app
+    spec:
+      containers:
+      - name: ms-framevideo-app
+        image: <seu-registro>/ms-framevideo-app:latest
+        ports:
+        - containerPort: 80
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: "Production"
+
