@@ -1,56 +1,65 @@
-﻿// src/infrastructure/adapters/FrameProcessingAdapter.cs
+﻿using System.IO.Abstractions;
 using ms_framevideo_app.src.application.ports;
 using ms_framevideo_app.src.domain.entities;
-using ms_framevideo_app.src.domain.services;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.IO.Compression;
+using ms_framevideo_app.src.domain.services;
 
 namespace ms_framevideo_app.src.infrastructure.adapters
 {
-    /// <summary>
-    /// Adaptador que integra a lógica de processamento de frames (usando FrameGenerationService).
-    /// </summary>
     public class FrameProcessingAdapter : IFrameProcessorPort
     {
-        private readonly FrameGenerationService _frameGenerationService;
+        private readonly IFrameGenerationServicePort _frameGenerationService;
+        private readonly IFileSystem _fileSystem;
 
-        public FrameProcessingAdapter(FrameGenerationService frameGenerationService)
+        public FrameProcessingAdapter(IFrameGenerationServicePort frameGenerationService, IFileSystem fileSystem)
         {
             _frameGenerationService = frameGenerationService;
+            _fileSystem = fileSystem;
         }
 
         public string ProcessChunk(Chunk chunk, string localChunkPath)
         {
-            // 1) Gerar frames
+            // 1) Generate frames
             var frames = _frameGenerationService.GenerateFrames(chunk, localChunkPath);
 
-            // 2) Compactar em .zip
+            // 2) Create ZIP file
             string localZipPath = CreateZipFile(chunk, frames);
 
             return localZipPath;
         }
 
-        private string CreateZipFile(Chunk chunk, List<ms_framevideo_app.src.domain.entities.Frame> frames)
+        private string CreateZipFile(Chunk chunk, List<Frame> frames)
         {
-            // Exemplo de nome de arquivo .zip local
-            string zipFilePath = Path.Combine(Path.GetTempPath(), $"{chunk.VideoId}_{chunk.ChunkId}.zip");
+            string zipFilePath = _fileSystem.Path.Combine(_fileSystem.Path.GetTempPath(), $"{chunk.VideoId}_{chunk.ChunkId}.zip");
 
-            if (File.Exists(zipFilePath))
+            if (_fileSystem.File.Exists(zipFilePath))
             {
-                File.Delete(zipFilePath);
+                _fileSystem.File.Delete(zipFilePath);
             }
 
-            using (var zipArchive = ZipFile.Open(zipFilePath, ZipArchiveMode.Create))
+            // Create a new ZIP archive using the file system abstraction
+            using (var zipStream = _fileSystem.File.Open(zipFilePath, FileMode.CreateNew))
+            using (var zipArchive = new ZipArchive(zipStream, ZipArchiveMode.Create))
             {
                 foreach (var frame in frames)
                 {
-                    // Aqui, teoricamente, o arquivo .jpg teria sido gerado.
-                    // Para simplificar, vamos fingir que ele existe em frame.FilePath.
+                    // Ensure the frame file exists in the mock file system
+                    if (!_fileSystem.File.Exists(frame.FilePath))
+                    {
+                        throw new FileNotFoundException($"Frame file not found: {frame.FilePath}");
+                    }
 
-                    // Adiciona arquivo ao zip
-                    zipArchive.CreateEntryFromFile(frame.FilePath, Path.GetFileName(frame.FilePath));
+                    // Read the frame file content
+                    var fileContent = _fileSystem.File.ReadAllBytes(frame.FilePath);
+
+                    // Create a new entry in the ZIP archive
+                    var entry = zipArchive.CreateEntry(_fileSystem.Path.GetFileName(frame.FilePath));
+
+                    // Write the frame file content to the ZIP entry
+                    using (var entryStream = entry.Open())
+                    {
+                        entryStream.Write(fileContent, 0, fileContent.Length);
+                    }
                 }
             }
 

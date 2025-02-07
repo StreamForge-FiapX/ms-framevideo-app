@@ -1,5 +1,4 @@
-﻿// src/infrastructure/adapters/S3StorageAdapter.cs
-using ms_framevideo_app.src.application.ports;
+﻿using ms_framevideo_app.src.application.ports;
 using Amazon.S3;
 using Amazon.S3.Model;
 using Microsoft.Extensions.Configuration;

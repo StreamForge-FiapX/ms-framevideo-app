@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  ASPNETCORE_ENVIRONMENT: "Development"
+  Redis__ConnectionString: "redis:6379"
+  RabbitMQ__Host: "rabbitmq"
+  AWS__Region: "sa-east-1"

@@ -1,5 +1,4 @@
-﻿// src/infrastructure/adapters/RedisCacheAdapter.cs
-using ms_framevideo_app.src.application.ports;
+﻿using ms_framevideo_app.src.application.ports;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using StackExchange.Redis;

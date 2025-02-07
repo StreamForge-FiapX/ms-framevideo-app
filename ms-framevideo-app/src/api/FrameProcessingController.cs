@@ -1,5 +1,4 @@
-﻿// src/api/FrameProcessingController.cs
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ms_framevideo_app.src.application.usecases;
 using ms_framevideo_app.src.domain.entities;
 

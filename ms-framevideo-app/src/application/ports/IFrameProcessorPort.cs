@@ -1,5 +1,4 @@
-﻿// src/application/ports/IFrameProcessorPort.cs
-using ms_framevideo_app.src.domain.entities;
+﻿using ms_framevideo_app.src.domain.entities;
 using System.Collections.Generic;
 
 namespace ms_framevideo_app.src.application.ports

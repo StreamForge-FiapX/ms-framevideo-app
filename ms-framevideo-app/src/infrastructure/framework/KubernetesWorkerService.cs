@@ -1,5 +1,4 @@
-﻿// src/infrastructure/framework/KubernetesWorkerService.cs
-using ms_framevideo_app.src.application.usecases;
+﻿using ms_framevideo_app.src.application.usecases;
 using ms_framevideo_app.src.domain.entities;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
