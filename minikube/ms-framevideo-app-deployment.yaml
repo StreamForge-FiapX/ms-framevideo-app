@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-framevideo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-framevideo-app
+  template:
+    metadata:
+      labels:
+        app: ms-framevideo-app
+    spec:
+      containers:
+        - name: ms-framevideo-app
+          image: ms-framevideo-app  # Certifique-se de que a imagem está disponível no Minikube
+          ports:
+            - containerPort: 8080
+            - containerPort: 8081
+          envFrom:
+            - configMapRef:
+                name: app-config

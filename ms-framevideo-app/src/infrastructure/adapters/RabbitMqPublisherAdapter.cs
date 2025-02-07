@@ -1,5 +1,4 @@
-﻿// src/infrastructure/adapters/RabbitMqPublisherAdapter.cs
-using ms_framevideo_app.src.application.ports;
+﻿using ms_framevideo_app.src.application.ports;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;

@@ -1,5 +1,4 @@
-﻿// src/application/ports/IMessagePublisherPort.cs
-namespace ms_framevideo_app.src.application.ports
+﻿namespace ms_framevideo_app.src.application.ports
 {
     public interface IMessagePublisherPort
     {

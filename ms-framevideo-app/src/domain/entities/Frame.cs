@@ -1,5 +1,4 @@
-﻿// src/domain/entities/Frame.cs
-namespace ms_framevideo_app.src.domain.entities
+﻿namespace ms_framevideo_app.src.domain.entities
 {
     public class Frame
     {

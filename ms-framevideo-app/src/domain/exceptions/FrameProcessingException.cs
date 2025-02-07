@@ -1,5 +1,4 @@
-﻿// src/domain/exceptions/FrameProcessingException.cs
-using System;
+﻿using System;
 
 namespace ms_framevideo_app.src.domain.exceptions
 {
