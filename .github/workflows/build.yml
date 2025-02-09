@@ -14,10 +14,10 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 17
-          distribution: 'zulu'
+          distribution: 'zulu' # Alternative distribution options are available.
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Cache SonarQube Cloud packages
         uses: actions/cache@v4
         with:
@@ -42,21 +42,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          # Starting SonarScanner with test coverage parameters
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"StreamForge-FiapX_ms-framevideo-app" /o:"streamforge-fiapx" `
-            /d:sonar.token="$env:SONAR_TOKEN" `
-            /d:sonar.host.url="https://sonarcloud.io" `
-            /d:sonar.coverageReportPaths="**/TestResults/Coverage/*.cobertura.xml" `
-            /d:sonar.cs.vstest.reportsPaths="**/TestResults/*.trx"
-          
-          # Build solution and run tests with coverage
-          dotnet build ./ms-framevideo-app --configuration Release
-          dotnet test ./ms-framevideo-app.Tests --configuration Release `
-            --logger trx `
-            --results-directory TestResults `
-            /p:CollectCoverage=true `
-            /p:CoverletOutputFormat=cobertura `
-            /p:CoverletOutput=./TestResults/Coverage/
-          
-          # Finalize SonarQube analysis
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"StreamForge-FiapX_ms-framevideo-app" /o:"streamforge-fiapx" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet build
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
